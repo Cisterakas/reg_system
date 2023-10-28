@@ -54,7 +54,7 @@ import NavigationBar from './NavigationBar.vue';
                   Please select this option if you do not have a MYUIC account.
                 </div>
                 
-                <a href="/login" type="button" class="btnB">Select</a>
+                <a href="/personalInfo" type="button" class="btnB">Select</a>
               </div>
             </div>
           </div>
