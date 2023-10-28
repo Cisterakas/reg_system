@@ -4,6 +4,7 @@ import Category from './components/Category.vue';
 import About from './components/About.vue';
 import Login from './components/Login.vue';
 import Consent from './components/Consent.vue';
+import PrsnlInfo from './components/PrsnlInfo.vue';
 
 const routes = [
     { path: '/', component: Home },
@@ -11,6 +12,7 @@ const routes = [
     { path: '/about', component: About },
     { path: '/login', component: Login, name: Login },
     { path: '/consent', component: Consent },
+    { path: '/personalInfo', component: PrsnlInfo },
 ];
 
 const router = createRouter({
