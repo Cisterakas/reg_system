@@ -54,6 +54,10 @@ background-color: #ffffff;
 }
 
 footer{
+  font: 100 25px Saira Condensed, sans-serif;
 background-color: #f986a3
+}
+h6{
+  font-size: larger;
 }
 </style>

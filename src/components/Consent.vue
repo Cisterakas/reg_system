@@ -40,7 +40,9 @@ import NavigationBar from './NavigationBar.vue';
                 <div class="div-9">
                   Please select this option if you have your MYUIC account.
                 </div>
-                <div class="div-10"><div class="div-11">SELECT</div></div>
+
+                
+                <a href="/login" type="button" class="btnA">Select</a>
               </div>
             </div>
           </div>
@@ -51,13 +53,16 @@ import NavigationBar from './NavigationBar.vue';
                 <div class="div-15">
                   Please select this option if you do not have a MYUIC account.
                 </div>
-                <div class="div-16"><div class="div-17">SELECT</div></div>
+                
+                <a href="/login" type="button" class="btnB">Select</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="div-18"><div class="div-19">BACK</div></div>
+      
+      <!-- <button class="btnBack" type="button">Back</button> -->
+      <a href="/" type="button" class="btnBack">Back</a>
     </div>
   </div>
  
@@ -139,7 +144,10 @@ import NavigationBar from './NavigationBar.vue';
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  padding: 53px 20px 72px;
+  padding: 0px 20px 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 991px) {
   .div-6 {
@@ -150,14 +158,18 @@ import NavigationBar from './NavigationBar.vue';
 .div-7 {
   align-self: center;
   display: flex;
-  width: 423px;
+  width: 424px;
   max-width: 100%;
   flex-direction: column;
+  
 }
 .div-8 {
   color: #f986a3;
   margin-left: 21px;
   font: 700 45px Saira Condensed, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 991px) {
   .div-8 {
@@ -176,36 +188,34 @@ import NavigationBar from './NavigationBar.vue';
     max-width: 100%;
   }
 }
-.div-10 {
-  justify-content: center;
+.btnA {
   align-items: center;
   background-color: #d9d9d9;
+  color: #000;
   align-self: center;
   display: flex;
-  width: 133px;
+  width: 132px;
   max-width: 100%;
   flex-grow: 1;
   flex-direction: column;
-  margin: 33px 0 0 -16px;
+  margin: 40px;
   padding: 0 20px;
-}
-.div-11 {
-  color: #f986a3;
-  align-self: center;
-  text-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font: 700 35px Saira Condensed, sans-serif;
 }
-@media (max-width: 991px) {
-  .div-11 {
-    text-wrap: initial;
-  }
+.btnA:hover{
+  background-color: #f6557e;
+  color:#ffffff;
 }
+
 .column-2 {
   display: flex;
   flex-direction: column;
   line-height: normal;
   width: 50%;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 @media (max-width: 991px) {
   .column-2 {
@@ -213,6 +223,7 @@ import NavigationBar from './NavigationBar.vue';
   }
 }
 .div-12 {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: #fff;
   display: flex;
   flex-grow: 1;
@@ -220,6 +231,9 @@ import NavigationBar from './NavigationBar.vue';
   width: 100%;
   margin: 0 auto;
   padding: 53px 20px 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 991px) {
   .div-12 {
@@ -238,6 +252,9 @@ import NavigationBar from './NavigationBar.vue';
   color: #f986a3;
   margin-left: 21px;
   font: 700 45px Saira Condensed, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 991px) {
   .div-14 {
@@ -250,53 +267,64 @@ import NavigationBar from './NavigationBar.vue';
   align-self: stretch;
   margin-top: 35px;
   font: 400 40px Saira Condensed, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 991px) {
   .div-15 {
     max-width: 100%;
   }
 }
-.div-16 {
-  justify-content: center;
+.btnB {
   align-items: center;
   background-color: #d9d9d9;
+  color: #000;
   align-self: center;
   display: flex;
   width: 132px;
   max-width: 100%;
   flex-grow: 1;
   flex-direction: column;
-  margin: 36px 0 0 14px;
+  margin: 40px;
   padding: 0 20px;
-}
-.div-17 {
-  color: #f986a3;
-  align-self: center;
-  text-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font: 700 35px Saira Condensed, sans-serif;
+}
+.btnB:hover{
+  background-color: #f6557e;
+  color:#ffffff;
 }
 @media (max-width: 991px) {
   .div-17 {
     text-wrap: initial;
   }
 }
-.div-18 {
+.btnBack {
+  font-family: Saira Condensed, sans-serif;
+  font-size: 35px;
+  font-weight: 700;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   background-color: #d9d9d9;
-  align-self: start;
-  display: flex;
+  color: #000;
   margin-top: 116px;
   width: 159px;
-  max-width: 100%;
-  flex-grow: 1;
-  flex-direction: column;
   padding: 13px 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: none;
 }
 @media (max-width: 991px) {
-  .div-18 {
+  .btnBack {
     margin-top: 40px;
   }
+}
+.btnBack:hover{
+  background-color:#000;
+  color:#f6557e;
 }
 .div-19 {
   color: #000;
