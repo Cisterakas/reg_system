@@ -46,7 +46,7 @@ import NavigationBar from './NavigationBar.vue'
                 <div class="column-3">
                   
                   
-                    <a href="/about" type="button" class="btnreq">REQUEST FOR OFFICIAL DOCUMENT</a>
+                    <a href="/consent" type="button" class="btnreq">REQUEST FOR OFFICIAL DOCUMENT</a>
                 
                  
                 </div>
