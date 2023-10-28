@@ -3,12 +3,14 @@ import Home from './components/Home.vue';
 import Category from './components/Category.vue';
 import About from './components/About.vue';
 import Login from './components/Login.vue';
+import Consent from './components/Consent.vue';
 
 const routes = [
     { path: '/', component: Home },
     { path: '/category', component: Category },
     { path: '/about', component: About },
     { path: '/login', component: Login, name: Login },
+    { path: '/consent', component: Consent },
 ];
 
 const router = createRouter({
