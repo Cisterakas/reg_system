@@ -4,8 +4,6 @@ import NavigationBar from './NavigationBar.vue'
 </script>
 <template>
     <NavigationBar />
-    <h1>Home</h1>
-    <a href="/login" class="btn btn-primary">Login</a>
     <div class="boxA">
     <div class="columnsA">
       <div class="divA">
@@ -287,6 +285,7 @@ import NavigationBar from './NavigationBar.vue'
   padding-left: 19px;
   width: 100%;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 } 
 
 .column-4 {
@@ -402,6 +401,7 @@ import NavigationBar from './NavigationBar.vue'
   padding-left: 19px;
   width: 100%;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 } 
 
 .btnreq:hover{
