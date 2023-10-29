@@ -1,6 +1,7 @@
 <script setup>
 import ApplicationNavigationBar from './ApplicationNavigationBar.vue';
 import Footer from './Footer.vue';
+
 </script>
 
 <template>
@@ -35,7 +36,7 @@ import Footer from './Footer.vue';
         <input type="text" id="middle-name" class="input" />
       </div>
       <div class="content">
-        <label class="label optional" for="suffix">Suffix</label>
+        <label class="label optional" for="suffix">Suffix (Optional)</label>
         <input type="text" id="suffix" class="input" />
       </div>
       <div class="content">
@@ -71,9 +72,12 @@ import Footer from './Footer.vue';
     </section>
     <section class="navigation">
         <a href="/consent" type="button" class="btnBack">Back</a>
-      <!-- <div class="button">BACK</div> -->
+      
       <a href="/" type="button" class="btnNext">Next</a>
     </section>
+    <div class="warning" v-if="showWarning">
+      <p>Please fill out all required fields before proceeding.</p>
+    </div>
   </main>
     <Footer />
 </template>
