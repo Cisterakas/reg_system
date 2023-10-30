@@ -40,7 +40,7 @@ import Footer from './Footer.vue';
     <section class="navigation">
         <a href="/personalInfo" type="button" class="btnBack">Back</a>
       
-      <a href="/personalInfo2" type="button" class="btnNext">Next</a>
+      <a href="/consent" type="button" class="btnNext">Next</a>
     </section>
     <div class="warning" v-if="showWarning">
       <p>Please fill out all required fields before proceeding.</p>
@@ -49,16 +49,8 @@ import Footer from './Footer.vue';
     <Footer />
 </template>
 <style scoped>
- .inputDate{
-    background-color: #d9d9d9;
-    align-self: auto;
-    display: flex;
-    width: 590px;
-    height: 80px;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-basis: auto;
- }
+</style>
+<style scoped>
   .main-container {
     background: linear-gradient(127.55deg, #f6557e, rgba(255, 201, 245, 0.949));
     display: flex;
