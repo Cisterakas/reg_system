@@ -6,7 +6,7 @@ import Login from './components/Login.vue';
 import Consent from './components/Consent.vue';
 import PrsnlInfo from './components/PrsnlInfo.vue';
 import PrsnlInfo2 from './components/PrsnlInfo2.vue';
-
+import ListOfDoc from './components/ListOfDoc.vue';
 const routes = [
     { path: '/', component: Home },
     { path: '/category', component: Category },
@@ -15,6 +15,7 @@ const routes = [
     { path: '/consent', component: Consent },
     { path: '/personalInfo', component: PrsnlInfo },
     { path: '/personalInfo2', component: PrsnlInfo2 },
+    { path: '/docrequest', component: ListOfDoc },
 ];
 
 const router = createRouter({

@@ -24,25 +24,27 @@ import Footer from './Footer.vue';
      <hr>
       <h2 class="title">Basic Information</h2>
       <div class="content">
+      <div class="column">
         <label class="label" for="first-name">First Name</label>
         <input type="text" id="first-name" class="input" />
       </div>
-      <div class="content">
+      <div class="column">
         <label class="label" for="last-name">Last Name</label>
         <input type="text" id="last-name" class="input" />
       </div>
-      <div class="content">
+      <div class="column">
         <label class="label" for="middle-name">Middle Name</label>
         <input type="text" id="middle-name" class="input" />
       </div>
-      <div class="content">
+      <div class="column">
         <label class="label optional" for="suffix">Suffix (Optional)</label>
         <input type="text" id="suffix" class="input" />
       </div>
-      <div class="content">
+      <div class="column">
         <label class="label" for="birthdate">Birthdate</label>
         <input type="date" id="birthdate" class="inputDate" />
       </div>
+    </div>
      <hr>
       <h2 class="title">Contact Information</h2>
       <div class="content">

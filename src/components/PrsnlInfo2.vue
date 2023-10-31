@@ -40,7 +40,7 @@ import Footer from './Footer.vue';
     <section class="navigation">
         <a href="/personalInfo" type="button" class="btnBack">Back</a>
       
-      <a href="/consent" type="button" class="btnNext">Next</a>
+      <a href="/docrequest" type="button" class="btnNext">Next</a>
     </section>
     <div class="warning" v-if="showWarning">
       <p>Please fill out all required fields before proceeding.</p>
