@@ -30,16 +30,18 @@ import Category from './Category.vue';
   <style scoped>
 
 .uic-logo {
-  width: 90px;
+  width: auto;
   margin-top: -5px;
   margin-left: 20px;
   background-color: #f986a3;
 }
 
 .navbar-light {
+  width: auto;
   background-color: #e65b7a;
 }
 .navbar-text {
+  width: auto;
   margin-left: 20px;
   font-family: "Saira Condensed", sans-serif;
   font-size: 200%;

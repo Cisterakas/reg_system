@@ -15,7 +15,7 @@ import NavigationBar from './NavigationBar.vue';
         <input type="password" id="password" name="password" placeholder="Enter your password">
       </div>
       
-      <a href="/personalInfo" type="button" class="button">Login</a>
+      <a href="/docrequest" type="button" class="button">Login</a>
     </form>
   </div>
     </div>
