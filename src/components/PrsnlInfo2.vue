@@ -8,7 +8,7 @@ import Footer from './Footer.vue';
 <ApplicationNavigationBar />
 <main class="main-container">
     <section class="description">
-      <h2 class="title">Personal Information</h2>
+      <h2 class="title">Account Information</h2>
       <div class="content">
         <p>
           Read the items below, before proceeding with your online application.
@@ -18,64 +18,29 @@ import Footer from './Footer.vue';
             ALL fields must be filled out, unless they are marked as
             <strong>optional</strong>
           </li>
-          <li>Enter your name during your stay at the university.</li>
+          
         </ul>
       </div>
      <hr>
-      <h2 class="title">Basic Information</h2>
+      <h2 class="title">Sign Up</h2>
       <div class="content">
-      <div class="column">
-        <label class="label" for="first-name">First Name</label>
+        <label class="label" for="first-name">Username</label>
         <input type="text" id="first-name" class="input" />
       </div>
-      <div class="column">
-        <label class="label" for="last-name">Last Name</label>
-        <input type="text" id="last-name" class="input" />
-      </div>
-      <div class="column">
-        <label class="label" for="middle-name">Middle Name</label>
-        <input type="text" id="middle-name" class="input" />
-      </div>
-      <div class="column">
-        <label class="label optional" for="suffix">Suffix (Optional)</label>
-        <input type="text" id="suffix" class="input" />
-      </div>
-      <div class="column">
-        <label class="label" for="birthdate">Birthdate</label>
-        <input type="date" id="birthdate" class="inputDate" />
-      </div>
-    </div>
-     <hr>
-      <h2 class="title">Contact Information</h2>
       <div class="content">
-        <div class="column">
-          <label class="label" for="address">Address</label>
-          <input type="text" id="address" class="input" />
-        </div>
-        <div class="column">
-          <label class="label" for="email">Email Address</label>
-          <input type="email" id="email" class="input" />
-        </div>
-        <div class="column">
-          <label class="label" for="mobile">Mobile No.</label>
-          <input type="tel" id="mobile" class="input" />
-        </div>
-      </div>
-      <hr>
-      <h2 class="title">College/Course History</h2>
-      <div class="content">
-        <label class="label" for="last-school-year">Last School Year Attended</label>
-        <input type="text" id="last-school-year" class="input" />
+        <label class="label" for="last-name">Password</label>
+        <input type="password" id="last-name" class="input" />
       </div>
       <div class="content">
-        <label class="label" for="college-course">College / Course Attended</label>
-        <input type="text" id="college-course" class="input" />
+        <label class="label" for="middle-name">Confirm Password</label>
+        <input type="password" id="middle-name" class="input" />
       </div>
+      
     </section>
     <section class="navigation">
-        <a href="/consent" type="button" class="btnBack">Back</a>
+        <a href="/personalInfo" type="button" class="btnBack">Back</a>
       
-      <a href="/personalInfo2" type="button" class="btnNext">Next</a>
+      <a href="/docrequest" type="button" class="btnNext">Next</a>
     </section>
     <div class="warning" v-if="showWarning">
       <p>Please fill out all required fields before proceeding.</p>
@@ -84,16 +49,8 @@ import Footer from './Footer.vue';
     <Footer />
 </template>
 <style scoped>
- .inputDate{
-    background-color: #d9d9d9;
-    align-self: auto;
-    display: flex;
-    width: 590px;
-    height: 80px;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-basis: auto;
- }
+</style>
+<style scoped>
   .main-container {
     background: linear-gradient(127.55deg, #f6557e, rgba(255, 201, 245, 0.949));
     display: flex;
