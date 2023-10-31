@@ -15,7 +15,7 @@
           </thead>
           <tbody>
             <tr v-for="category in categories" :key="category.id">
-              <td>{{ category.id }}</td>
+              <td class="idnum">{{ category.id }}</td>
               <td>{{ category.docType }}</td>
               <td>{{ category.description }}</td>
               <td>
@@ -59,6 +59,26 @@ import Footer from './Footer.vue';
   const categories = ref([
     { id: 1, docType: "Authentication", description: "30.00 / PAGE", quantity: 1 },
     { id: 2, docType: "CAV or Certification, Authentication, Verification (Local/DFA)", description: "370.00 / SET", quantity: 1 },
+    { id: 3, docType: "Certificate of English as Medium of Instruction", description: "60.00 / COPY", quantity: 1 },
+    { id: 4, docType: "Certificate of Enrollment", description: "60.00 / COPY", quantity: 1 },
+    { id: 5, docType: "Certificate of General Weighted Average (GWA)", description: "60.00 / COPY", quantity: 1 },
+    { id: 6, docType: "Certificate of Government Recognition of the Program", description: "60.00 / COPY", quantity: 1 },
+    { id: 7, docType: "Certificate of Grades", description: "60.00 / COPY", quantity: 1 },
+    { id: 8, docType: "Certificate of Grades for Written Comprehensive Examination", description: "60.00 / COPY", quantity: 1 },
+    { id: 9, docType: "Certificate of Grading System", description: "60.00 / COPY", quantity: 1 },
+    { id: 10, docType: "Certificate of Graduation/Degree Completion", description: "60.00 / COPY", quantity: 1 },
+    { id: 11, docType: "Certificate of Latin Honor", description: "60.00 / COPY", quantity: 1 },
+    { id: 12, docType: "Certificate of Units Earned", description: "60.00 / COPY", quantity: 1 },
+    { id: 13, docType: "Certificate True Copy of Special Order (S.O.)", description: "50.00 / COPY", quantity: 1 },
+    { id: 14, docType: "Certificate of Academic Requirements (CAR)", description: "60.00 / COPY", quantity: 1 },
+    { id: 15, docType: "Course Description", description: "60.00 / COPY", quantity: 1 },
+    { id: 16, docType: "Diploma - (ISSUED ONLY ONCE AND SUBJECT TO VERIFICATION)n", description: "400.00 / COPY", quantity: 1 },
+    { id: 17, docType: "Diploma (Second Copy) - In case the Diploma is lost or whatever reason, you are required to submit a notarized Affidavit of loss or Affidavit of Explanation justifying the request. In case of damaged diploma, the same must be surrendered to UIC for appropriate disposition", description: "400.00 / COPY", quantity: 1 },
+    { id: 18, docType: "Honorable Dismissal (issued only once and subject verification)", description: "300.00 / SET", quantity: 1 },
+    { id: 19, docType: "Letter of no Objection", description: "60.00 / COPY", quantity: 1 },
+    { id: 20, docType: "Official Transcript of Records", description: "250.00 / SET", quantity: 1 },
+    { id: 21, docType: "Related Learning Experience (RLE)", description: "150.00/ COPY", quantity: 1 },
+
   ]);
   
   const decreaseQuantity = (category) => {
@@ -82,6 +102,15 @@ import Footer from './Footer.vue';
   </script>
 
 <style scoped>
+.button-plus:hover{
+    background-color: #12a225;
+}
+.button-minus:hover{
+    background-color: #f13a34;
+}
+.idnum{
+    font-weight: 700;
+}
 icon-shape {
     display: inline-flex;
     align-items: center;
