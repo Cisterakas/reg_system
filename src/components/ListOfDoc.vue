@@ -46,7 +46,103 @@
             </tr>
           </tbody>
         </table>
+        <div class="div">
+    <div class="div-2">
+      <span
+        style="
+          font-family: Saira Condensed, Roboto, Helvetica,
+            sans-serif;
+          font-weight: 700;
+          color: rgba(255, 0, 0, 1);
+        "
+        >VERY IMPORTANT: </span
+      ><span
+        style="
+          font-family: Saira Condensed, Roboto, Helvetica,
+            sans-serif;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 1);
+        "
+        >Kindly upload your identification (ID) card for verification purposes.
+        Any valid ID will do as long as it has your signature (e.g, Company ID,
+        School ID, Alumni ID, government-issued IDs)</span
+      >
+    </div>
+    <!--UPLOAD BUTTON-->
+    <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="control uploader">
+          <label for="imageInput" class="button is-dark is-fullwidth is-medium">
+            <span class="icon is-small">
+              <i class="fas fa-upload"></i>
+            </span>
+            <span>Upload image</span>
+          </label>
+          <input
+            ref="imageInput"
+            id="imageInput"
+            type="file"
+            accept="image/*"
+            @change="handleImageUpload"
+            class="is-sr-only"
+          />
+        </p>
+      </div>
+      <!-- Image preview -->
+      <div class="field">
+        <img id="thumbnail" :src="imageUrl" alt="image-preview-here" />
+      </div>
+    </div>
+  </section>
+
+    <div class="div-5">
+      <span
+        style="
+          font-family: Saira Condensed, -apple-system, Roboto, Helvetica,
+            sans-serif;
+          font-weight: 700;
+          color: rgba(255, 0, 0, 1);
+        "
+        >VERY IMPORTANT: </span
+      ><span
+        style="
+          font-family: Saira Condensed, -apple-system, Roboto, Helvetica,
+            sans-serif;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 1);
+        "
+        ><br>In case you have been granted an Honorable Dismissal and COMPLIED,
+        meaning you have been issued an Official Transcript of Records with
+        Remarks &quot;Granted Transfer Credentials&quot; (Copy Good for that
+        particular school you transferred in after leaving UIC), secure a Letter
+        of No Objection from that school in order to process your request for
+        Transcript of Records.<br /></span
+      ><span
+        style="
+          font-family: Saira Condensed, -apple-system, Roboto, Helvetica,
+            sans-serif;
+          font-weight: 700;
+          color: rgba(255, 0, 0, 1);
+        "
+        >VERY IMPORTANT: </span
+      ><span
+        style="
+          font-family: Saira Condensed, -apple-system, Roboto, Helvetica,
+            sans-serif;
+          font-weight: 700;
+          color: rgba(0, 0, 0, 1);
+        "
+        >Price is subject to change without prior notice.<br
+      /></span>
+    </div>
+  </div>
       </section>
+      <section class="navigation">
+        <a href="/personalInfo2" type="button" class="btnBack">Back</a>
+      
+      <a href="/personalInfo2" type="button" class="btnNext">Next</a>
+    </section>
     </main>
     <Footer />
   </template>
@@ -55,7 +151,18 @@
   import { ref } from 'vue';
   import ApplicationNavigationBar from './ApplicationNavigationBar.vue';
 import Footer from './Footer.vue';
-  
+const imageUrl = ref('');
+
+const handleImageUpload = (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = () => {
+      imageUrl.value = reader.result;
+    };
+    reader.readAsDataURL(file);
+  }
+};
   const categories = ref([
     { id: 1, docType: "Authentication", description: "30.00 / PAGE", quantity: 1 },
     { id: 2, docType: "CAV or Certification, Authentication, Verification (Local/DFA)", description: "370.00 / SET", quantity: 1 },
@@ -102,6 +209,164 @@ import Footer from './Footer.vue';
   </script>
 
 <style scoped>
+hero.is-light {
+  background-color: #f5f5f5;
+}
+
+.uploader {
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #343a40;
+  color: #fff;
+}
+
+#thumbnail {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+.div {
+  background-color: #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0 16px;
+}
+.div-2 {
+  color: #000;
+  align-self: end;
+  margin-top: 18px;
+  max-width: 1085px;
+  font: 400 30px Saira Condensed, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-2 {
+    max-width: 100%;
+    margin-right: 7px;
+  }
+}
+.div-3 {
+  background-color: rgba(255, 255, 255, 0.79);
+  align-self: end;
+  display: flex;
+  width: 170px;
+  max-width: 100%;
+  align-items: flex-start;
+  gap: 13px;
+  margin: 25px 12px 0 0;
+  padding: 15px 17px 15px 8px;
+}
+@media (max-width: 991px) {
+  .div-3 {
+    margin-right: 10px;
+  }
+}
+.img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 40px;
+  overflow: hidden;
+  align-self: stretch;
+  max-width: 100%;
+}
+.div-4 {
+  color: #000;
+  margin: auto 0;
+  font: 400 30px Saira Condensed, sans-serif;
+}
+.div-5 {
+  color: #000;
+  text-align: justify;
+  align-self: end;
+  max-width: 1078px;
+  margin: 52px 0 54px;
+  font: 700 30px Saira Condensed, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-5 {
+    max-width: 100%;
+    margin: 40px 5px 40px 0;
+  }
+}
+
+.navigation {
+    align-self: center;
+    display: flex;
+    margin-top: 62px;
+    width: 100%;
+    max-width: 1120px;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .navigation {
+      max-width: 100%;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+  }
+.btnBack {
+  font-family: Saira Condensed, sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #d9d9d9;
+  color: #000;
+  width: 159px;
+  padding: 13px 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  margin-bottom: 30px;
+}
+@media (max-width: 991px) {
+  .btnBack {
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+}
+.btnBack:hover{
+  background-color:#000;
+  color:#f6557e;
+}
+.btnNext {
+  font-family: Saira Condensed, sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #0d6605;
+  color: #ffffff;
+  width: 159px;
+  padding: 13px 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  margin-bottom: 30px;
+}
+@media (max-width: 991px) {
+  .btnNext {
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+}
+.btnNext:hover{
+  background-color:#ffffff;
+  color:#f6557e;
+}
 .button-plus:hover{
     background-color: #12a225;
 }
@@ -145,6 +410,7 @@ icon-shape {
     font: 700 30px Saira Condensed, sans-serif;
   }
  .main-container {
+    width: auto;
     background: linear-gradient(127.55deg, #f6557e, rgba(255, 201, 245, 0.949));
     display: flex;
     flex-direction: column;
@@ -155,7 +421,7 @@ icon-shape {
     display: flex;
     margin-top: 39px;
     margin-bottom: 39px;
-    width: 80%;
+    width: auto;
     max-width: 1117px;
     flex-direction: column;
     border-radius: 10px;
