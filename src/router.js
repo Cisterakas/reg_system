@@ -7,6 +7,8 @@ import Consent from './components/Consent.vue';
 import PrsnlInfo from './components/PrsnlInfo.vue';
 import PrsnlInfo2 from './components/PrsnlInfo2.vue';
 import ListOfDoc from './components/ListOfDoc.vue';
+import Shipping from './components/Shipping.vue';
+
 const routes = [
     { path: '/', component: Home },
     { path: '/category', component: Category },
@@ -16,6 +18,7 @@ const routes = [
     { path: '/personalInfo', component: PrsnlInfo },
     { path: '/personalInfo2', component: PrsnlInfo2 },
     { path: '/docrequest', component: ListOfDoc },
+    { path: '/shipping', component: Shipping },
 ];
 
 const router = createRouter({
