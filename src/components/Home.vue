@@ -9,7 +9,7 @@ import NavigationBar from './NavigationBar.vue'
       <div class="divA">
         <div class="columnA">
           <div class="div-2A">
-            <h1 class="div-3A">Welcome</h1>
+            <h1 class="div-3A">Welcome Hi</h1>
             <h1 class="div-4A">University of the Immaculate Conception</h1>
             <h2 class="div-5A">OFFICE OF THE REGISTRAR</h2>
             <h3 class="div-6A">
